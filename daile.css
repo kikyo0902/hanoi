@@ -1,0 +1,127 @@
+/* ================= Reset cơ bản ================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* ================= Header ================= */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #1a73e8;
+  color: #fff;
+  padding: 15px 20px;
+  z-index: 1000;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Nav */
+header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+header nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #ffdd57;
+}
+
+/* ================= Main ================= */
+main {
+  max-width: 900px;
+  margin: 120px auto 40px auto; /* margin-top đủ để header không che */
+  padding: 0 20px;
+}
+
+main img {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+main h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+main p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+/* ================= Footer ================= */
+footer {
+  background-color: #1a73e8;
+  color: #fff;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 50px;
+}
+
+/* ================= Đa ngôn ngữ ================= */
+[data-lang] {
+  display: none; /* Ẩn tất cả trước khi JS hiển thị ngôn ngữ */
+}
+
+/* ================= Responsive ================= */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  main h3 {
+    font-size: 1.3rem;
+  }
+
+  main p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  main {
+    margin: 140px 10px 20px 10px;
+  }
+
+  header .logo {
+    font-size: 1.2rem;
+  }
+}
