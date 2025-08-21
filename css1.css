@@ -39,6 +39,9 @@ header .logo img {
   width: auto;
   display: block;
 }
+header .logo a {
+  color: #fff;
+}
 
 /* Responsive */
 @media (max-width: 1024px) {
